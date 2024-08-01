@@ -3,187 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Łucja Białobrzeska</title>
+    <title>Łucja Białobrzeska - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #3498db; /* Appealing blue */
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c; /* Red accent */
+            --background-light: #f5f5f5;
+            --background-dark: #1c1c1c;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #7f8c8d; /* Muted text color */
+            --card-bg-light: #ffffff;
+            --card-bg-dark: #2a2a2a;
+            --border-light: #dcdcdc;
+            --border-dark: #444444;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --title-light: #333333;
+            --title-dark: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --background-light: var(--background-dark);
+            --text-dark: var(--text-light);
+            --card-bg-light: var(--card-bg-dark);
+            --border-light: var(--border-dark);
+            --shadow-light: var(--shadow-dark);
+            --title-light: var(--text-light);
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 40px auto;
-            max-width: 900px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f0f4f8;
-        }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .container:hover {
-            transform: scale(1.01);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .header img {
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            margin-right: 20px;
-            border: 5px solid #0066cc;
-        }
-        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
             margin: 0;
-            font-size: 2.2em;
-            color: #0066cc;
-            transition: color 0.3s;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .header h1:hover {
-            color: #004a99;
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .header p {
-            margin: 5px 0;
-            font-size: 1em;
-            color: #555;
-        }
-        .section {
+
+        header {
+            text-align: center;
             margin-bottom: 40px;
         }
-        .section-title {
-            font-size: 1.6em;
-            font-weight: bold;
-            margin-top: 10px;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 5px;
-            color: #333;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 6px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, var(--primary-color), var(--accent-color)) border-box;
+            box-shadow: 0 0 0 4px var(--background-light);
+            transition: transform 0.3s;
         }
-        .section-title:hover {
-            color: #004a99;
+
+        .profile-img:hover {
+            transform: scale(1.05);
         }
-        .section-content {
-            display: none;
-            margin-top: 10px;
+
+        .profile-info {
+            position: relative;
         }
-        h3 {
-            margin-top: 15px;
-            font-size: 1.3em;
-            color: #333;
+
+        .profile-info h1 {
+            margin: 10px 0;
+            font-size: 2.2em;
+            color: var(--primary-color);
+            font-weight: 600;
         }
-        p {
-            margin: 5px 0;
+
+        .profile-info p {
+            margin: 8px 0;
             font-size: 1em;
-            color: #555;
+            color: var(--text-dark);
         }
-        .consent {
-            font-size: 0.9em;
-            color: #777;
-            border-top: 1px solid #ddd;
-            padding-top: 10px;
-            text-align: center;
-            margin-top: 30px;
-        }
-        a {
-            color: #0066cc;
+
+        .profile-info a {
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s;
         }
-        a:hover {
-            text-decoration: underline;
-            color: #004a99;
+
+        .profile-info a:hover {
+            color: var(--accent-color);
+        }
+
+        .linkedin-link {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            text-align: center;
+            transition: color 0.3s;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 2px 4px var(--shadow-light);
+        }
+
+        .linkedin-link:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg-light);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px var(--shadow-light);
+            transition: box-shadow 0.3s, transform 0.3s;
+            border: 1px solid var(--border-light);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px var(--shadow-dark);
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: var(--title-light);
+            margin-bottom: 10px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .card-content {
+            font-size: 1em;
+            color: var(--text-dark);
+        }
+
+        .card-content ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .card-content li {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--background-light);
+            border-top: 1px solid var(--border-light);
+            margin-top: 40px;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px var(--shadow-light);
+            transition: background-color 0.3s;
+        }
+
+        .dark-mode-toggle i {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .profile-info h1 {
+                font-size: 1.8em;
+            }
+
+            .card-title {
+                font-size: 1.3em;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                padding: 8px;
+            }
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sectionTitles = document.querySelectorAll('.section-title');
-            sectionTitles.forEach(title => {
-                title.addEventListener('click', function () {
-                    const content = this.nextElementSibling;
-                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                });
-            });
-        });
-    </script>
 </head>
 <body>
-
     <div class="container">
-        <div class="header">
-            <img src="https://i.ibb.co/sqg2Px3/IMG-9545.jpg" alt="Profile Photo">
-            <div>
+        <header>
+            <img class="profile-img" src="https://i.ibb.co/sqg2Px3/IMG-9545.jpg" alt="Profile Photo">
+            <div class="profile-info">
                 <h1>Łucja Białobrzeska</h1>
                 <p>Email: <a href="mailto:lucja.bialobrzeska@gmail.com">lucja.bialobrzeska@gmail.com</a></p>
                 <p>Phone: <a href="tel:+48600436570">+48 600 436 570</a></p>
                 <p>Location: Gdańsk, Poland</p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/%C5%82ucja-bia%C5%82obrzeska-43294b1a2/" target="_blank">linkedin.com/in/łucja-białobrzeska</a></p>
+                <a href="https://www.linkedin.com/in/%C5%82ucja-bia%C5%82obrzeska-43294b1a2/" target="_blank" class="linkedin-link">
+                    Visit me on LinkedIn
+                </a>
             </div>
-        </div>
+        </header>
 
-        <div class="section">
-            <div class="section-title">Summary &#9662;</div>
-            <div class="section-content">
-                <p>IT Analyst with 4 years of experience in business analysis and data management. Proficient in SQL, Snowflake, and PowerBI. Skilled at bridging the gap between technical and non-technical stakeholders, with strong analytical and consulting abilities.</p>
-            </div>
-        </div>
+        <nav>
+            <a href="#summary">Summary</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#certification">Certification</a>
+            <a href="#affiliation">Affiliation</a>
+        </nav>
 
-        <div class="section">
-            <div class="section-title">Skills &#9662;</div>
-            <div class="section-content">
-                <p><strong>Technical:</strong> SQL, PowerBI, Snowflake, BPMN, Jira, Confluence, Figma, Python, Bash, CSS, Jenkins</p>
-                <p><strong>Professional:</strong> Attention to Detail, Communication, Stakeholder Management, Industry Knowledge</p>
-                <p><strong>Languages:</strong> English (C1 level), Polish (Native)</p>
-            </div>
-        </div>
+        <main>
+            <section id="summary" class="card">
+                <h2 class="card-title">Summary</h2>
+                <p class="card-content">IT Analyst with 4 years of experience in business analysis and data management. Proficient in SQL, Snowflake, and PowerBI. Skilled at bridging the gap between technical and non-technical stakeholders, with strong analytical and consulting abilities.</p>
+            </section>
 
-        <div class="section">
-            <div class="section-title">Professional Experience &#9662;</div>
-            <div class="section-content">
-                <h3>Senior IT Analyst, Nordea</h3>
-                <p><em>Dec 2022 - Present | Remote</em></p>
-                <p>Led the creation of a data catalog using Snowflake, significantly improving data discovery. Assisted stakeholders in understanding Snowflake’s setup and managed tasks for Data Engineers and Developers. Implemented a new ETL framework, enhancing data quality, and developed PowerBI dashboards for real-time monitoring.</p>
 
-                <h3>Business Analyst, SPEEDNET</h3>
-                <p><em>Aug 2022 - Dec 2022</em></p>
-                <p>Gathered and translated requirements for mobile apps and a document management system. Conducted workshops with over 30 stakeholders, established a centralized documentation repository, and collaborated with UX specialists to develop intuitive user flows.</p>
+            <section id="experience" class="card">
+                <h2 class="card-title">Professional Experience</h2>
+                <div class="card-content">
+                    <h3>Senior IT Analyst, Nordea</h3>
+                    <p><em>Dec 2022 - Present </em></p>
+                    <p>Led the creation of a data catalog (micro-service web application) integrating Snowflake and Cloudera7 data warehouses. Assisted business stakeholders in understanding Snowflake’s setup and managed tasks for Data Engineers and Developers. Implemented a new ETL framework, enhancing data quality, and developed PowerBI dashboards for monitoring.</p>
 
-                <h3>Business Analyst, Roche</h3>
-                <p><em>Sep 2021 - Aug 2022</em></p>
-                <p>Led the requirements gathering for a cloud-based Clinical Trial Management System using agile methodologies. Ensured solutions met regulatory standards and worked closely with business representatives to deliver secure and robust solutions.</p>
+                    <h3>Business Analyst, SPEEDNET</h3>
+                    <p><em>Aug 2022 - Dec 2022</em></p>
+                    <p>Gathered and translated requirements for mobile apps and a document management system. Conducted workshops with over 30 stakeholders, established a centralized documentation repository, and collaborated with UX specialists to develop intuitive user flows.</p>
 
-                <h3>Junior Business Analyst, Roche</h3>
-                <p><em>Jan 2021 - Sep 2021</em></p>
-                <p>Managed system specifications and risk documentation throughout the application lifecycle. Created data maps to facilitate seamless integration between different systems and provided regular updates to stakeholders, ensuring informed decision-making and project transparency.</p>
-            </div>
-        </div>
+                    <h3>Business Analyst, Roche</h3>
+                    <p><em>Sep 2021 - Aug 2022</em></p>
+                    <p>Led the requirements gathering for a cloud-based Clinical Trial Management System using agile methodologies. Ensured solutions met regulatory standards and worked closely with business representatives to deliver secure and robust solutions.</p>
 
-        <div class="section">
-            <div class="section-title">Certification &#9662;</div>
-            <div class="section-content">
-                <p>Leading SAFe® (Scaled Agile Framework)</p>
-            </div>
-        </div>
+                    <h3>Junior Business Analyst, Roche</h3>
+                    <p><em>Jan 2021 - Sep 2021</em></p>
+                    <p>Managed system specifications and risk documentation throughout the application lifecycle. Created data maps to facilitate seamless integration between different systems and provided regular updates to stakeholders, ensuring informed decision-making and project transparency.</p>
+                </div>
+            </section>
 
-        <div class="section">
-            <div class="section-title">Professional Affiliation &#9662;</div>
-            <div class="section-content">
-                <p>Member, International Institute of Business Analysis (IIBA)</p>
-            </div>
-        </div>
+            <section id="skills" class="card">
+                <h2 class="card-title">Skills</h2>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Technical:</strong> SQL, PowerBI, Snowflake, Python, Bash, CSS, Jenkins, GitHub, BitBucket</li>
+                        <li><strong>Professional:</strong> Attention to Detail, Communication, Stakeholder Management, Industry Knowledge</li>
+                        <li><strong>Languages:</strong> English (C1 level), Polish (Native)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="certification" class="card">
+                <h2 class="card-title">Certification</h2>
+                <p class="card-content">Leading SAFe® (Scaled Agile Framework)</p>
+            </section>
 
-        <div class="consent">
-            <p>I give consent for my personal data to be processed for recruitment purposes.</p>
-        </div>
+            <section id="affiliation" class="card">
+                <h2 class="card-title">Professional Affiliation</h2>
+                <p class="card-content">Member, International Institute of Business Analysis (IIBA)</p>
+            </section>
+        </main>
+
+        <footer>
+            <p class="consent">This portfolio is for demonstration purposes only.</p>
+        </footer>
     </div>
 
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        toggle.addEventListener('click', () => {
+            body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+            toggle.querySelector('i').classList.toggle('fa-moon');
+            toggle.querySelector('i').classList.toggle('fa-sun');
+        });
+    </script>
 </body>
 </html>
+
