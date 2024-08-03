@@ -1,15 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() { // Wait for content to load
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); 
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement
- = document.querySelector(targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior:
- 'smooth' });
-        }
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+            }
+        });
     });
 });
