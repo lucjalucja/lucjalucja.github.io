@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem; /* Smaller for logo style */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; /* Subtle bottom border */
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Horizontal list */
+    justify-content: flex-end; /* Align to the right */
+}
+
+nav li {
+    margin-left: 20px; /* Space between items */
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    text-align: center; /* Center the image */
+}
+
+.profile-image {
+    max-width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    clip-path: ellipse(60% 40% at 50% 50%);  /* Creates an elliptical shape */
+    border-radius: 50%;       /* This rounds the clipped area */
+
+
+}
+
+/* Experience Section */
+#experience {
+    padding: 60px 0;
+}
+
+.experience-entry {
+    position: relative; /* For timeline dot positioning */
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px; /* Adjust position as needed */
+    width: 10px;
+    height: 10px;
+    background-color: #007bff; /* Blue dot */
+    border-radius: 50%;
+}
+
+.experience-content h3 {
+    margin-bottom: 5px;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 40px 0;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center;
+}
+
+.skills-list li {
+    margin: 5px 10px;
+    padding: 8px 12px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 0;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Button Style */
+.button {
+    display: inline-block;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600; /* Bolder font */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
