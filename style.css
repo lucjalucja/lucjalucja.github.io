@@ -76,20 +76,7 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-.hero-image {
-    text-align: center; /* Center the image */
-}
 
-.profile-image {
-    max-width: 300px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    clip-path: ellipse(60% 40% at 50% 50%);  /* Creates an elliptical shape */
-    border-radius: 50%;       /* This rounds the clipped area */
-
-
-}
 
 /* Experience Section */
 #experience {
@@ -162,6 +149,7 @@ footer {
     background-color: #007bff; /* Blue button */
     color: #fff;
     padding: 12px 25px;
+    margin-top: 15px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -171,5 +159,6 @@ footer {
 .button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
 
 
